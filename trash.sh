@@ -57,7 +57,7 @@ for FILE in "$@"; do
     fi
 done
 
-# 确认操作
+# 确认操作（如删除时不需要确认，请将此处多行注释）
 echo -n "Are you sure you want to move the above items to the trash? [Y/N]: "
 read -r CONFIRM_MOVE
 if [ "$CONFIRM_MOVE" != "Y" ] && [ "$CONFIRM_MOVE" != "y" ]; then
