@@ -35,6 +35,15 @@ rm file1 file2 directory1
 ```
 “删除”前，您会收到确认提示。
 
+### 确认操作（如删除时不需要确认，请将此处多行注释）
+```bash
+echo -n "Are you sure you want to move the above items to the trash? [Y/N]: "
+read -r CONFIRM_MOVE
+if [ "$CONFIRM_MOVE" != "Y" ] && [ "$CONFIRM_MOVE" != "y" ]; then
+    echo "Operation cancelled."
+    exit 0
+fi
+```
 
 ### 清空垃圾桶
 
