@@ -16,7 +16,7 @@ if [ -d "$TRASH_DIR" ]; then
     find "$TARGET_DIR" -type f -mtime +7 -delete
     echo "Deleted files older than 7 days in $TARGET_DIR at $(date)" >> "$LOG_FILE"
     # 删除7天前最后修改的目录
-    find "$TARGET_DIR" -type d -mtime +7 -exec /bin/rm -rf {} +
+    find "$TARGET_DIR" -type d -mindepth 1 -mtime +7 -exec /bin/rm -rf {} +
     echo "Deleted directories older than 7 days in $TARGET_DIR at $(date)" >> "$LOG_FILE"
 else
     echo "Directory $TARGET_DIR does not exist at $(date)" >> "~/err.log"
