@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# https://github.com/qqAys/trash.sh
+# https://github.com/lifedata2025/trash.sh
 
 # 垃圾桶
 TRASH_DIR=~/.trash
