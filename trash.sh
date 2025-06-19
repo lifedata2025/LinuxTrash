@@ -29,6 +29,8 @@ if [ "$1" == "-c" ]; then
     read -r CONFIRM
     if [ "$CONFIRM" == "Y" ] || [ "$CONFIRM" == "y" ]; then
         /bin/rm -rf "$TRASH_DIR"/*
+        # 这行用来清空隐藏文件
+        /bin/rm -rf "$TARGET_DIR"/.[!.]* "$TARGET_DIR"/..?*
         echo "Trash cleared."
     else
         echo "Operation cancelled."
