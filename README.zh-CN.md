@@ -1,27 +1,35 @@
 [English](./README.md)
 
-# trash.sh
+# LinuxTrash
 
-`trash.sh` 是一个安全替代 `rm` 的脚本，用于安全处理文件和目录，执行 `rm` 会将它们移动到垃圾桶里，而不是永久删除。
+`LinuxTrash` 是一个安全替代 `rm` 的工具，用于安全处理文件和目录，执行 `rm` 会将它们移动到垃圾桶里 `~/.trash` ，而不是永久删除。
 
-如果你按照下述方法使用了 `trash.sh` ，本质上 `rm` 的操作不再是 `rm` ，而是 `mv` 。`trash.sh` 帮你完成了移至垃圾桶的操作，请您知悉这一点！
+如果你按照下述方法使用了 `LinuxTrash` ，本质上 `rm` 的操作不再是 `rm` ，而是 `mv` 。`LinuxTrash` 帮你完成了移至垃圾桶的操作，请您知悉这一点！
 
 
 ## 安装
 
-1. 下载 `trash.sh` 文件至用户目录
+1. 下载 `LinuxTrash` 文件至用户目录
+
+此脚本说明默认您安装在家目录home，可根据实际情况自己修改脚本路径。
+
 ```bash
-wget https://raw.githubusercontent.com/qqAys/trash.sh/main/trash.sh -O ~/trash.sh
+git clone https://github.com/lifedata2025/LinuxTrash
+
+or
+
+
 ```
 
-2. 加上执行权限
+2. 给安装路径 `/your/path/to` 上的脚本加执行权限
 ```bash
-chmod +x ~/trash.sh
+chmod +x ~/LinuxTrash/trash.sh
+chmod +x ~/LinuxTrash/scheduledCleanup.sh
 ```
 
 3. 在 `.bashrc` 或 `.zshrc` 中添加别名 (可以不是 `rm` )
 ```bash
-echo 'alias rm="~/trash.sh"' >> ~/.bashrc
+echo 'alias rm="~/LinuxTrash/trash.sh"' >> ~/.bashrc
 source ~/.bashrc
 ```
 
@@ -33,9 +41,12 @@ source ~/.bashrc
 ```bash
 rm file1 file2 directory1
 ```
-“删除”前，您会收到确认提示。
+默认“删除”前，您不会收到确认提示。
 
-### 确认操作（如删除时不需要确认，请将此处多行注释）
+### 确认操作（如删除前需要确认，请将此处取消多行注释）
+
+打开 `~/LinuxTrash/trash.sh` 并取消以下注释，这样您在删除前会收到确实提示。
+
 ```bash
 echo -n "Are you sure you want to move the above items to the trash? [Y/N]: "
 read -r CONFIRM_MOVE
@@ -53,7 +64,7 @@ fi
 ```bash
 rm -c
 ```
-垃圾桶会被您一览无余，并被提示确认清空操作。
+垃圾桶会被您清空，并被提示确认清空操作。
 
 ### 定时自动清空
 如果你希望垃圾桶实现自动清空
@@ -64,16 +75,19 @@ rm -c
 crontab -e
 ```
 
-设置定时任务（如每天 1 点执行）
+2 设置定时任务（如每天 1 点执行）
 
 ```bash
 # 分 时 日 月 周 scheduledCleanup.sh所在目录
-0 1 * * * ~/trash/scheduledCleanup.sh
+0 1 * * * ~/LinuxTrash/scheduledCleanup.sh
+0 23 1 * * /bin/rm  ~/.trash/scheduledCleanup.log  # 每月定时清空删除日志
 ```
+
+保存并退出即可。
 
 ## 垃圾桶结构
 
-您“删除”的文件将会被重命名加上当前时间，并移动 (`mv`) 至 `~/.trash` 文件夹内。这个如果您“删除”的是文件夹，则文件夹的内容不会被重命名，垃圾桶的结构看起来像下面的样子：
+您“删除”的文件将会被重命名加上当前时间，并移动 (`mv`) 至 `~/.trash` 目录内。这个如果您“删除”的是目录，则目录的内容不会被重命名，垃圾桶的结构看起来像下面的样子：
 ```bash
 $ tree .trash/
 
@@ -94,6 +108,11 @@ $ tree .trash/
 
 这个项目采用 MIT 许可证 - 详情见 [LICENSE](./LICENSE) 文件。
 
-## 贡献
+### 欢迎赞助 —— 哪怕只是一杯咖啡也非常有帮助！
+### Donations are welcome — even a cup of coffee helps!
 
-请提交 PR 或打开 issue 来讨论您的想法。
+![c98dd2d51666ecddc3f1813e3eeaf30](https://github.com/user-attachments/assets/da09772b-146b-4d27-828f-012225527d33)
+
+![11c0132f74ad92b975a02b219a7b45e](https://github.com/user-attachments/assets/c2dddd0d-fe0f-40ad-8672-6b51cf77696a)
+
+
