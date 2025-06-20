@@ -80,7 +80,7 @@ crontab -e
 ```bash
 # 分 时 日 月 周 scheduledCleanup.sh所在目录
 0 1 * * * ~/LinuxTrash/scheduledCleanup.sh
-0 23 1 * * /bin/rm  ~/.trash/scheduledCleanup.log  # 每月定时清空删除日志
+0 23 1 * * /bin/rm -rf ~/.trash/scheduledCleanup.log  # 每月定时清空删除日志
 ```
 
 保存并退出即可。
