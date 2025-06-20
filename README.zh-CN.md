@@ -112,11 +112,12 @@ $ tree .trash/
 ### Donations are welcome — even a cup of coffee helps!
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/da09772b-146b-4d27-828f-012225527d33" width="400">
+  <img src="https://github.com/user-attachments/assets/da09772b-146b-4d27-828f-012225527d33" width="200">
 </p>
 
-![c98dd2d51666ecddc3f1813e3eeaf30](https://github.com/user-attachments/assets/da09772b-146b-4d27-828f-012225527d33)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/c2dddd0d-fe0f-40ad-8672-6b51cf77696a" width="200">
+</p>
 
-![11c0132f74ad92b975a02b219a7b45e](https://github.com/user-attachments/assets/c2dddd0d-fe0f-40ad-8672-6b51cf77696a)
 
 
