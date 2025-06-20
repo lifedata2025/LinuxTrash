@@ -111,6 +111,10 @@ $ tree .trash/
 ### 欢迎赞助 —— 哪怕只是一杯咖啡也非常有帮助！
 ### Donations are welcome — even a cup of coffee helps!
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/da09772b-146b-4d27-828f-012225527d33" width="400">
+</p>
+
 ![c98dd2d51666ecddc3f1813e3eeaf30](https://github.com/user-attachments/assets/da09772b-146b-4d27-828f-012225527d33)
 
 ![11c0132f74ad92b975a02b219a7b45e](https://github.com/user-attachments/assets/c2dddd0d-fe0f-40ad-8672-6b51cf77696a)
