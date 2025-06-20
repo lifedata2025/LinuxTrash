@@ -113,7 +113,7 @@ $ tree .trash/
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/da09772b-146b-4d27-828f-012225527d33" width="200" style="margin-right:10px;" />
-  <img src="https://github.com/user-attachments/assets/c2dddd0d-fe0f-40ad-8672-6b51cf77696a" width="200" />
+  <img src="https://github.com/user-attachments/assets/c2dddd0d-fe0f-40ad-8672-6b51cf77696a" width="150" />
 </p>
 
 
