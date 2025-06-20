@@ -7,19 +7,25 @@ If you use `LinuxTrash` as described below, `rm` essentially becomes `mv`. `tras
 
 ## Installation
 
-1. Download the `trash.sh` file to your user directory:
+1. Download the `LinuxTrash` file to your user directory:
 ```bash
-wget https://raw.githubusercontent.com/qqAys/trash.sh/main/trash.sh -O ~/trash.sh
+
+git clone https://github.com/lifedata2025/LinuxTrash
+
+or
+
+
+
 ```
 
 2. Add execute permissions:
 ```bash
-chmod +x ~/trash.sh
+chmod +x ~/LinuxTrash/trash.sh
 ```
 
 3. Add an alias (doesn't have to be `rm`) to your `.bashrc` or `.zshrc`:
 ```bash
-echo 'alias rm="~/trash.sh"' >> ~/.bashrc
+echo 'alias rm="~/LinuxTrash/trash.sh"' >> ~/.bashrc
 source ~/.bashrc
 ```
 
@@ -61,10 +67,15 @@ $ tree .trash/
 ```
 
 ## Note ⚠️
-Using `trash.sh` does not guarantee that data or files will be securely "deleted." You should still back up important data to ensure its safety.
+Using `LinuxTrash` does not guarantee that data or files will be securely "deleted." You should still back up important data to ensure its safety.
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
 
-## Contributing
-Please submit a pull request or open an issue to discuss your ideas.
+### Donations are welcome — even a cup of coffee helps!
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/da09772b-146b-4d27-828f-012225527d33" width="200" style="margin-right:10px;" />
+  <img src="https://github.com/user-attachments/assets/c2dddd0d-fe0f-40ad-8672-6b51cf77696a" width="150" />
+</p>
+
