@@ -17,6 +17,7 @@ git clone https://github.com/lifedata2025/LinuxTrash
 2. Add execute permissions:
 ```bash
 chmod +x ~/LinuxTrash/trash.sh
+chmod +x ~/LinuxTrash/scheduledCleanup.sh
 ```
 
 3. Add an alias (doesn't have to be `rm`) to your `.bashrc` or `.zshrc`:
