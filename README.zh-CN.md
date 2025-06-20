@@ -16,9 +16,6 @@
 ```bash
 git clone https://github.com/lifedata2025/LinuxTrash
 
-or
-
-
 ```
 
 2. 给安装路径 `/your/path/to` 上的脚本加执行权限
