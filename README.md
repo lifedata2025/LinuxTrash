@@ -12,10 +12,6 @@ If you use `LinuxTrash` as described below, `rm` essentially becomes `mv`. `tras
 
 git clone https://github.com/lifedata2025/LinuxTrash
 
-or
-
-
-
 ```
 
 2. Add execute permissions:
@@ -37,8 +33,19 @@ To move files or directories to the trash, use the `rm` command as usual:
 rm file1 file2 directory1
 ```
 
-You will receive a confirmation prompt before "deletion."
+By default, there is no confirmation before moving items to the trash.
+Enable confirmation prompt (optional)
 
+If you'd like to be prompted before moving items to the trash, open ~/LinuxTrash/trash.sh and uncomment the following lines:
+
+```bash
+echo -n "Are you sure you want to move the above items to the trash? [Y/N]: "
+read -r CONFIRM_MOVE
+if [ "$CONFIRM_MOVE" != "Y" ] && [ "$CONFIRM_MOVE" != "y" ]; then
+    echo "Operation cancelled."
+    exit 0
+fi
+```
 
 ### Emptying the Trash
 
@@ -50,6 +57,26 @@ To empty the trash, use the `-c` parameter:
 rm -c
 ```
 You will be prompted to confirm the emptying of the trash, and its contents will be displayed before deletion.
+
+### Set up automatic cleanup
+
+If you want the trash to be emptied automatically:
+
+Open the crontab editor:
+
+```bash
+crontab -e
+```
+
+Add a scheduled task (e.g., run daily at 1 AM):
+
+```bash
+# Minute Hour Day Month Weekday   Path to scheduledCleanup.sh
+0 1 * * * ~/LinuxTrash/scheduledCleanup.sh
+0 23 1 * * /bin/rm -rf ~/.trash/scheduledCleanup.log  # Clear the log on the 1st of every month at 11 PM
+```
+
+Save and exit.
 
 ## Trash Structure
 Files you "delete" will be renamed with the current timestamp and moved (`mv`) to the `~/.trash` folder. If you "delete" a directory, its contents will not be renamed. The structure of the trash looks like this:
