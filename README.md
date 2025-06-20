@@ -1,9 +1,9 @@
 [中文](./README.zh-CN.md)
 
-# trash.sh
-`trash.sh` is a script that serves as a safe alternative to `rm`, allowing for secure handling of files and directories by moving them to a trash bin instead of permanently deleting them.
+# LinuxTrash
+`LinuxTrash` is a tool that serves as a safe alternative to `rm`, allowing for secure handling of files and directories by moving them to a trash bin instead of permanently deleting them.
 
-If you use `trash.sh` as described below, `rm` essentially becomes `mv`. `trash.sh` handles moving items to the trash for you, so please be aware of this change!
+If you use `LinuxTrash` as described below, `rm` essentially becomes `mv`. `trash.sh` handles moving items to the trash for you, so please be aware of this change!
 
 ## Installation
 
