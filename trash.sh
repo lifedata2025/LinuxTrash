@@ -3,7 +3,7 @@
 # https://github.com/lifedata2025/LinuxTrash
 
 # 垃圾桶
-TRASH_DIR=“$HOME/.trash”
+TRASH_DIR="$HOME/.trash"
 
 # 如果不存在垃圾桶
 if [ ! -d "$TRASH_DIR" ]; then
